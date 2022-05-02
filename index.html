@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Lacquer&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./styles/style.css">
     <title>CALCULATOR</title>
 </head>
@@ -12,7 +13,7 @@
     <div class="main">
         <div class="main__calculator">
             <!-- calculator screen -->
-            <div class="main__screen">
+            <div class="screen">
                 <div id="sub__screen" class="sub__screen"></div>
                 <div id="main__screen" class="main__screen"></div>
             </div>
@@ -20,8 +21,8 @@
             <!-- calculator buttons -->
             <div class="main__buttons">
                  <!-- clear and delete buttons -->
-                <button id="clear__btn" class="btn">CLEAR</button>
-                <button id="del__btn" class="btn">DELETE</button>
+                <button id="clear__btn" class="btn span-2">CLEAR</button>
+                <button id="del__btn" class="btn span-2">DELETE</button>
                 <!-- operands and operator buttons -->
                 <button class="btn" data-number onclick="this,blur();">7</button>
                 <button class="btn" data-number onclick="this,blur();">8</button>

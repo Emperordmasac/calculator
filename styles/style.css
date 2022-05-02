@@ -1,0 +1,121 @@
+/* COLOR VARIABLES */
+:root {
+    --background: #f6f6f6;
+    --font: #222;
+    --border: #333;
+    --screen: #eee;
+    --calculator: #aaa;
+    --btn: #eee;
+    --btn-hover: #ddd;
+    --btn-active: #ccc;
+    --btn-red: #faa;
+    --btn-red-hover: #e99;
+    --btn-red-active: #d88;
+    --btn-blue: #aaf;
+    --btn-blue-hover: #99e;
+    --btn-blue-active: #88d;
+}
+  
+*,
+*::before,
+*::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    min-height: 100%;
+    position: relative;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--background);
+    color: var(--font);
+    font-family: 'Lacquer', cursive;
+
+    margin-bottom: 100px;
+}
+
+/* general styles for button */
+button {
+    border: none;
+    cursor: pointer;
+    outline: none;
+    color: inherit;
+    font-family: inherit;
+    font-size: inherit;
+}
+
+
+/* main */
+.main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+    padding: 10px;
+
+    min-height: 500px;
+    height: 75vh;
+}
+
+.main__calculator {
+    border: 2px var(--border) solid;
+    padding: 20px;
+    background-color: var(--calculator);
+    border-radius: 15px;
+    width: 400px;
+}
+
+.screen {
+    padding: 10px 20px;
+    border: 2px var(--border) solid;
+    background-color: var(--screen);
+    margin-bottom: 20px;
+    border-radius: 5px;
+    text-align: right;
+
+    word-wrap: break-word;
+    word-break: break-all;
+}
+
+.sub__screen {
+    min-height: 32px;
+    font-size: 20px;
+}
+
+.main__screen {
+    min-height: 64px;
+    font-size: 40px;
+}
+
+.main__buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 10px;
+}
+
+.span-2 {
+    grid-column: span 2;
+}
+
+.btn {
+    padding: 20px;
+    border: 2px var(--border) solid;
+    border-radius: 5px;
+    font-size: 20px;
+    background-color: var(--btn);
+}
+
+/* wawwu */
+/* Disables input spinners in calc screen */
+input[type='number']::-webkit-inner-spin-button,
+input[type='number']::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
