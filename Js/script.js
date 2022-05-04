@@ -1,3 +1,9 @@
+//variables
+let firstOperand = "";
+let secondOperand = "";
+let currentOperation = null;
+let shouldScreenReset = false;
+
 // DOM MANIPULATION
 const numbers = document.querySelectorAll('data-number');
 const operators = document.querySelectorAll('data-operator');
@@ -12,11 +18,44 @@ const mainScreen = document.querySelector("main__screen");
 window.addEventListener('keydown', handleClickEvent)
 
 
+
 //helper Functions
 //1
 function handleClickEvent(e) {
-    
+    if (e.key >= 0 && e,key <= 9) insertNumber(e.key)
+    if (e.key === ".") insertPoint()
+    if (e.key === "=" || e.key == "Enter") evaluate();
 }
+//2
+function insertNumber(number) {
+    if (mainScreen.textContent === "0" || shouldScreenReset)
+    resetScreen()
+    mainScreen.textContent += number
+}
+//3
+function resetScreen() {
+    mainScreen.textContent = ""
+    shouldScreenReset = false;
+}
+//4
+function insertPoint() {
+    if (shouldScreenReset) resetScreen()
+    if (mainScreen.textContent == "") mainScreen.textContent == "0"
+    if (mainScreen.textContent.includes(".")) return
+    mainScreen.textContent += "."
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
 // main calculator functions
 function add(a, b) {
