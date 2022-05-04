@@ -1,7 +1,7 @@
 //variables
 let firstOperand = "";
 let secondOperand = "";
-let currentOperation = null;
+let currentOperator = null;
 let shouldScreenReset = false;
 
 // DOM MANIPULATION
@@ -43,6 +43,15 @@ function insertPoint() {
     if (mainScreen.textContent == "") mainScreen.textContent == "0"
     if (mainScreen.textContent.includes(".")) return
     mainScreen.textContent += "."
+}
+//5
+function evaluate() {
+    if (currentOperator == null || shouldScreenReset ) return
+    if (currentOperator == "÷" && mainScreen.textContent == "0") {
+        alert("division by 0 is invalid!!!")
+        return
+    }
+    
 }
 
 
